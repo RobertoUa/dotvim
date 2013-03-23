@@ -59,14 +59,11 @@ Bundle 'vitaly/vim-syntastic-coffee'
 Bundle 'vim-scripts/jade.vim'
 Bundle 'wavded/vim-stylus'
 Bundle 'VimClojure'
-<<<<<<< HEAD
 Bundle 'bbommarito/vim-slim'
 Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'skwp/vim-rspec'
 Bundle 'pangloss/vim-javascript'
-=======
 Bundle 'slim-template/vim-slim'
->>>>>>> ddb0dcbf504a687094269cb87961005a82590f2f
 
 " Support and minor
 Bundle 'kana/vim-textobj-user'

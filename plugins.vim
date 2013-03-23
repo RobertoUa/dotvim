@@ -50,7 +50,7 @@ let g:yankring_history_dir = '~/.backup'
 
 " rails
 " completing Rails hangs a lot
-"let g:rubycomplete_rails = 1
+let g:rubycomplete_rails = 0
 
 " command-t
 "nmap <unique> <silent> <Leader>, :CommandT<CR>

@@ -30,6 +30,7 @@ announcements of new versions, tips, etc.
 * [Macros](#macros)
 * [Interesting Plugins](#interesting)
   * [nerdtree](#nerdtree)
+  * [nerdtree-tabs](#nerdtreetabs)
   * [nerdcommenter](#nerdcommenter)
   * [Command-T](#Command-T)
   * [CtrlP](#CtrlP)
@@ -44,7 +45,7 @@ announcements of new versions, tips, etc.
   * [ack.vim](#ack.vim)
   * [vim-indentobject](#vim-indentobject)
   * [greplace.vim](#greplace.vim)
-  * [vim-powerline](#vim-powerline)
+  * [vim-powerline](#powerline)
   * [threesome.vim](#threesome.vim)
   * [vim-endwise](#vim-endwise)
   * [delimitMate](#delimitMate)
@@ -78,15 +79,25 @@ From your homedirectory (on Linux/Mac OSX):
 * `ln -sfn dotvim .vim`
 * `ln -sfn dotvim/vimrc .vimrc`
 * `cd .vim; make install`
-* create ~/.local.vim if you want to have some
-  local/personal settings you don't want to commit into the repo
 
-> IMPORTANT: **always** add a `colorscheme` to your `~/.local-after.vim` file,
-> even if you use the defaults scheme add `colorscheme default`. Othewise you
-> will get a highlighting error `"E411: highlight group not found: Normal"`
-> during vim startup.
 
-Note: if you already have `~/.vim` `~/.vimrc` REMOVE THEM (you might want to backup them first :)
+  > Note: if you already have `~/.vim` `~/.vimrc` REMOVE THEM (you might want to backup them first :)
+
+* create `~/.vimrc.before` or `~/.vimrc.after` if you want to have some
+  local/personal settings you don't want to commit into the repo. see "[Local Configuration](#local)"
+
+
+  > IMPORTANT: **always** add a `colorscheme` to your `~/.vimrc.after` file.
+  > Even if you use the defaults scheme add `colorscheme default`. Othewise you
+  > will get a highlighting error `"E411: highlight group not found: Normal"`
+  > during vim startup.
+
+
+> IMPORTANT: [vim-powerline](#powerline) requires some extra glyphs to work properly.
+> Check the official documentation on
+> [font installation](http://lokaltog.github.com/powerline/overview.html#font-installation)
+> and follow the instructions. If you do not, then strange symbols will be
+> displayed instead. While this is not critical, it remains pretty annoying.
 
 [top](#top)
 
@@ -121,32 +132,33 @@ Check out the 'plugins.vim' and 'after/plugin/bindings.vim' files for more...
 
 For easy upgrades its preferable not to change the dotvim configuration files.
 Instead you can add your own local configuration into one of the local override
-files. There are several override files supported by dotvim:
+files. There are several override files supported by dotvim.
 
-Files loaded **before** the plugins:
+They are loaded in the following order:
 
-* `~/.vim_local` - deprecated
-* `~/.vim-before.vim`
+* base dotvim configuration (global, plugin configurations, bindings, macros)
+* `~/.local-before.vim` _[deprecated]_
+* `~/.vimrc.before`
+
+  Loaded **before** the plugins
 
   This is where you should pre-set various plugin flags, enable/disable options
-  etc. This is for things you would normally put into yoru vimrc file.
+  etc. This is for things you would normally put into your vimrc file.
 
-Files loaded **after** the plugins:
+* `~/.gvimrc.before` _[when GUI running]_
+* vim plugins
+* dotvim bindings and overrides (loaded from `~/.vim/after.vim`)
+* `.local-after.vim` _[deprecated]_
+* `.vimrc.after`
 
-* `~/.local.vim` - deprecated
-* `~/.local-after.vim`
+  Loaded **after** the plugins
 
   This is where you can override settings set by plugins that have no
-  customization options etc.
+  customization options.
 
-Configuration files are loaded in the following order:
+* `.gvimrc.after` _[when GUI running]_
 
-* dotvim configuration
-* .local-before.vim
-* plugins
-* dotvim bindings and overrides
-* .local.vim
-* .local-after.vim
+[top](#top)
 
 <a name=backups>
 #### Backups
@@ -208,8 +220,15 @@ execute it with `@a`.
 
     hax0r vim script to give you a tree explorer
 
-    * `Ctrl-P` - open directory browser
+    * `Ctrl-P` - open directory browser (**Note:** this is now handled by
+      [nerdtree-tabs](#nerdtreetabs) (see below))
     * `,p` - to find and highlight the currently open file in the tree
+
+*   <a name=nerdtreetabs>[nerdtree-tabs](https://github.com/jistr/vim-nerdtree-tabs) ([top](#top))
+
+    NERDTree and tabs together in Vim, painlessly
+
+    * `Ctrl-P` - open directory browser
 
 *   <a name=nerdcommenter>[nerdcommenter](http://github.com/scrooloose/nerdcommenter) ([top](#top))
 
@@ -384,9 +403,22 @@ execute it with `@a`.
     * `:Greplace` - Incorporate the modifications from the replace buffer into
       the corresponding files.
 
-*   <a name=vim-powerline>[vim-powerline](TBD) ([top](#top))
+*   <a name=powerline>[vim-powerline](https://github.com/astrails/vim-powerline) ([top](#top))
 
-    TBD
+    Add a nice status line to Vim
+
+    > Note: the old
+    > [Lokaltog/vim-powerline](https://github.com/Lokaltog/vim-powerline)
+    > project is now deprecated in favor of
+    > [Lokaltog/powerline](https://github.com/Lokaltog/vim-powerline) which is
+    > python based and is supposed to be better.
+    >
+    > Unfortunately I coudn't get it to work on my OSX machine. Even more
+    > unfortunately the old project has changed default branch to `new-plugin`
+    > which is empty except for the README file announcing the new project
+    > location. This makes it impossible to use with vundle. The solution for
+    > now is that I forked the original plugin project and make it available
+    > under `astrails` account in a form suitable for vundle.
 
 *   <a name=threesome.vim>[threesome.vim](https://github.com/sjl/threesome.vim) ([top](#top))
 
@@ -655,7 +687,7 @@ used intependently.
 
     syntax for [Jade](http://jade-lang.com/)
 
-*   [vim-slim](https://github.com/bbommarito/vim-slim)
+*   [vim-slim](https://github.com/slim-template/vim-slim)
 
     [Slim](http://slim-lang.com/) syntax support.
 

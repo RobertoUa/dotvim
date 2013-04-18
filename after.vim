@@ -8,15 +8,37 @@ set t_Co=256
 let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
 set nu
 map <Leader>\ <Plug>RubyTestRun
-"set tags+=gems.tags
-"set tags+=~/ruby_tags
+set tags+=gems.tags
+set tags+=~/ruby_tags
+set tags+=stdlib.tags
 set updatetime=4000
 set wildmenu
 set wildmode=list:full
 set clipboard=unnamedplus
+set grepprg=ag
+set synmaxcol=400
+let g:DisableAutoPHPFolding = 1
 let g:gitgutter_on_bufenter = 1
 let g:gitgutter_all_on_focusgained = 1
 let g:gitgutter_sign_column_always = 1
 let g:gundo_auto_preview = 0
+let g:nerd_tree_tabs_open_on_gui_startup = 0
 colorscheme railscasts
-hi SignColumn ctermbg=236
+hi SignColumn ctermbg=236 guibg=#333
+if has("gui_running")
+    set guioptions-=mrL
+else
+endif
+map <Up> <C-W>-
+map <Down> <C-W>+
+map <Right> <C-w>>
+map <Left> <C-w><
+inoremap <expr> <C-j> ((pumvisible())?("\<C-n>"):("j"))
+inoremap <expr> <C-k> ((pumvisible())?("\<C-p>"):("k"))
+let g:neocomplcache_enable_fuzzy_completion = 1
+autocmd FileType php setlocal makeprg=zca\ %<.php
+"autocmd FileType php NeoComplCacheEnable
+autocmd FileType php setlocal errorformat=%f(line\ %l):\ %m
+set dictionary+=~/.vim/php-funclist.txt
+
+

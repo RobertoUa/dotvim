@@ -41,4 +41,14 @@ autocmd FileType php setlocal makeprg=zca\ %<.php
 autocmd FileType php setlocal errorformat=%f(line\ %l):\ %m
 set dictionary+=~/.vim/php-funclist.txt
 
+let g:startify_show_files_number = 30
+let g:startify_unlisted_buffer = 0
+set expandtab
 
+set ts=4                " number of spaces in a tab
+set sw=4                " number of spaces for indent
+let g:syntastic_php_checkers=['php']
+
+map <C-1> :bp<cr>
+map <C-2> :bn<cr>
+nnoremap <Leader>fu :CtrlPFunky<Cr>

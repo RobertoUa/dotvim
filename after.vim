@@ -52,3 +52,19 @@ let g:syntastic_php_checkers=['php']
 map <C-1> :bp<cr>
 map <C-2> :bn<cr>
 nnoremap <Leader>fu :CtrlPFunky<Cr>
+let g:haddock_browser='/usr/bin/firefox-nightly'
+au Bufenter *.hs compiler ghc
+
+let g:neocomplete#enable_at_startup = 1
+" Use smartcase.
+let g:neocomplete#enable_smart_case = 1
+let g:necoghc_enable_detailed_browse = 1
+"setlocal omnifunc=necoghc#omnifunc
+"let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+
+" Sane Ignore For ctrlp
+let g:ctrlp_custom_ignore = {
+    \ 'dir': '\.git$\|\.hg$\|\.svn$\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp$',
+    \ 'file': '\.exe$\|\.so$\|\.dat$'
+\ }
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files']

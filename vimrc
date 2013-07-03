@@ -8,6 +8,6 @@ source ~/.vim/macros.vim
 if has('gui_running')
     source ~/.vim/gvimrc
 end
-
+set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
 " vimrc is loaded BEFORE the plugins
 source ~/.vim/before.vim

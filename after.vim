@@ -45,8 +45,8 @@ let g:startify_show_files_number = 30
 let g:startify_unlisted_buffer = 0
 set expandtab
 
-set ts=4                " number of spaces in a tab
-set sw=4                " number of spaces for indent
+set ts=2                " number of spaces in a tab
+set sw=2                " number of spaces for indent
 let g:syntastic_php_checkers=['php']
 
 map <C-1> :bp<cr>
@@ -60,6 +60,15 @@ let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
 let g:necoghc_enable_detailed_browse = 1
 "setlocal omnifunc=necoghc#omnifunc
+let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+
+let g:ctrlp_clear_cache_on_exit = 0
+let g:ctrlp_max_files = 0
+let g:ctrlp_cache_dir = $HOME.'/.cache/ctrlp'
+"let g:ctrlp_user_command=['ack-grep `pwd` -f']
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files']
+let g:ctrlp_working_path_mode = 'w'
+let g:signify_vcs_list = [ 'git', 'svn' ]
 "let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 
 " Sane Ignore For ctrlp

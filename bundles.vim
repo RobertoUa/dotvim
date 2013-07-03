@@ -61,6 +61,17 @@ Bundle 'vim-scripts/SQLComplete.vim'
 
 "Bundle 'travitch/hasksyn'
 
+" Haskell
+"Bundle 'vim-scripts/haskell.vim'
+Bundle 'lukerandall/haskellmode-vim'
+"Bundle 'bitc/vim-hdevtools'
+Bundle 'eagletmt/ghcmod-vim'
+Bundle 'ujihisa/neco-ghc'
+Bundle 'dag/vim2hs'
+Bundle 'Twinside/vim-hoogle'
+
+"Bundle 'travitch/hasksyn'
+
 " color themes
 Bundle 'altercation/vim-colors-solarized'
 
@@ -82,6 +93,7 @@ Bundle 'bbommarito/vim-slim'
 Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'skwp/vim-rspec'
 Bundle 'pangloss/vim-javascript'
+"Bundle 'chrisbra/csv.vim'
 Bundle 'vim-scripts/haskell.vim'
 "Bundle 'slim-template/vim-slim'
 
@@ -91,16 +103,37 @@ Bundle 'tpope/vim-repeat'
 Bundle 'vitaly/vim-gitignore'
 Bundle 'scrooloose/vim-space'
 Bundle 'mattn/gist-vim'
+Bundle 'mattn/webapi-vim'
+Bundle 'xolox/vim-misc'
+Bundle 'Shougo/vimproc.vim'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
-"Bundle 'mattn/webapi-vim'
-"Bundle 'xolox/vim-misc'
-"Bundle 'Shougo/vimproc.vim'
 
 " Buffer and window managing
-"Bundle 'fholgado/minibufexpl.vim'
+Bundle 'fholgado/minibufexpl.vim'
 "Bundle 'techlivezheng/vim-plugin-minibufexpl'
 Bundle 'vim-scripts/ZoomWin'
+
+
+Bundle 'mattn/zencoding-vim'
+Bundle 'ap/vim-css-color'
+Bundle 'tsaleh/vim-matchit'
+Bundle 'Shougo/vimshell'
+"Bundle 'Shougo/neocomplete.vim'
+"Bundle 'Shougo/neosnippet'
+Bundle 'ervandew/supertab'
+"Bundle 'ShowMarks'
+Bundle 'tpope/vim-unimpaired'
+"Bundle 'reinh/vim-makegreen'
+Bundle 'firegoby/SASS-Snippets'
+"Bundle 'xolox/vim-easytags'
+Bundle 'groenewege/vim-less'
+Bundle 'vim-scripts/jsbeautify'
+"Bundle 'derekwyatt/vim-scala'
+Bundle 'hail2u/vim-css3-syntax'
+Bundle 'briancollins/vim-jst'
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
 
 " GIT
 Bundle 'airblade/vim-gitgutter'

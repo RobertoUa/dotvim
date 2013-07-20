@@ -21,7 +21,7 @@ Bundle 'greplace.vim'
 Bundle 'sjl/splice.vim'
 Bundle 'Yggdroot/indentLine'
 Bundle 'tpope/vim-endwise'
-Bundle 'Lokaltog/TagHighlight'
+"Bundle 'Lokaltog/TagHighlight'
 "Bundle 'Raimondi/delimitMate'
 "Bundle 'joonty/vdebug.git'
 
@@ -58,17 +58,6 @@ Bundle 'vim-scripts/SQLComplete.vim'
 "Bundle 'ujihisa/neco-ghc'
 "Bundle 'dag/vim2hs'
 "Bundle 'Twinside/vim-hoogle'
-
-"Bundle 'travitch/hasksyn'
-
-" Haskell
-"Bundle 'vim-scripts/haskell.vim'
-Bundle 'lukerandall/haskellmode-vim'
-"Bundle 'bitc/vim-hdevtools'
-Bundle 'eagletmt/ghcmod-vim'
-Bundle 'ujihisa/neco-ghc'
-Bundle 'dag/vim2hs'
-Bundle 'Twinside/vim-hoogle'
 
 "Bundle 'travitch/hasksyn'
 
@@ -130,7 +119,6 @@ Bundle 'firegoby/SASS-Snippets'
 Bundle 'groenewege/vim-less'
 Bundle 'vim-scripts/jsbeautify'
 "Bundle 'derekwyatt/vim-scala'
-Bundle 'hail2u/vim-css3-syntax'
 Bundle 'briancollins/vim-jst'
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
@@ -140,14 +128,15 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'tpope/vim-fugitive'
 
 " CSS
-Bundle 'hail2u/vim-css3-syntax'
+"Bundle 'hail2u/vim-css3-syntax'
 Bundle 'ap/vim-css-color'
 Bundle 'firegoby/SASS-Snippets'
 
 " Snippets and completition
-Bundle 'ervandew/supertab'
+"Bundle 'Valloric/YouCompleteMe'
 "Bundle 'Shougo/neocomplete.vim'
 "Bundle 'Shougo/neosnippet'
+Bundle 'ervandew/supertab'
 Bundle 'garbas/vim-snipmate'
 Bundle 'honza/vim-snippets'
 
@@ -158,7 +147,8 @@ Bundle 'godlygeek/csapprox'
 Bundle 'rking/ag.vim'
 Bundle 'beloglazov/vim-online-thesaurus'
 Bundle 'tsaleh/vim-matchit'
-Bundle 'tpope/vim-unimpaired'
+Bundle 'bling/vim-airline'
+Bundle 'joeytwiddle/RepeatLast.vim'
 
 "Bundle 'Shougo/vimshell'
 "Bundle 'ShowMarks'
@@ -169,9 +159,9 @@ Bundle 'tpope/vim-unimpaired'
 "Bundle 'derekwyatt/vim-scala'
 "Bundle 'briancollins/vim-jst'
 "Bundle 'kablamo/vim-git-log'
+"Bundle 'skwp/vim-ruby-conque'
 "Bundle 'tpope/vim-dispatch'
 "Bundle 'skalnik/vim-vroom'
-"Bundle 'skwp/vim-ruby-conque'
 "Bundle 'justincampbell/vim-eighties'
 "Bundle 'vim-scripts/EasyGrep'
 "Bundle 'terryma/vim-multiple-cursors'

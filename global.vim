@@ -14,6 +14,7 @@ if has('multi_byte')
   scriptencoding utf-8
   set encoding=utf-8
 end
+
 " presentation settings
 set number              " precede each line with its line number
 set numberwidth=3       " number of culumns for line numbers
@@ -54,6 +55,8 @@ set ts=2                " number of spaces in a tab
 set sw=2                " number of spaces for indent
 set et                  " expand tabs into spaces
 
+set ttimeoutlen=50      " fast Esc to normal mode
+
 " mouse settings
 if has("mouse")
   set mouse=a
@@ -72,7 +75,7 @@ let g:rubycomplete_buffer_loading = 0
 let g:rubycomplete_classes_in_global = 1
 
 " directory settings
-silent !mkdir -vp ~/.backup/undo/ > /dev/null 2>&1
+call system('mkdir -vp ~/.backup/undo/ > /dev/null 2>&1')
 set backupdir=~/.backup,.       " list of directories for the backup file
 set directory=~/.backup,~/tmp,. " list of directory names for the swap file
 set nobackup            " do not write backup files

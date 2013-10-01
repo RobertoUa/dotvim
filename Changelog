@@ -1,3 +1,23 @@
+* 2013-08-28
+  - fix startup echo messages redirect
+  - prevent multiple after.vim loads
+
+* 2013-08-27
+  - writer.vim
+  - faster Esc into normal mode (ttimeoutlen=50)
+  - syntastic fixes (no re-check on exit, fancy marks)
+  - vim-dispatch (async external commands with output in vim)
+  - unite.vim (generic user-interface plugin)
+
+* 2013-07-09
+  - prompt before deleting bundles directory
+  - annotate bundles.vim
+  - blockle.vim plugin
+  - README updates
+
+* 2013-04-01
+  - elixir language support
+
 * 2013-03-21
   - NERDTreeTabs plugin
 

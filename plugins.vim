@@ -8,10 +8,14 @@ hi! link ShowMarksHLm LineNr
 " syntastic
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=2
+let g:syntastic_check_on_wq=0
+let g:syntastic_error_symbol='✗'
+let g:syntastic_warning_symbol='⚠'
+
 
 " delimitMate
-let g:delimitMate_expand_space = 1
-let g:delimitMate_expand_cr = 1
+let g:delimitMate_expand_space = 1 " Turns on/off the expansion of <Space>
+let g:delimitMate_expand_cr = 1    " Turns on/off the expansion of <CR>
 
 " nerdtree
 " Ctrl-P to Display the file browser tree
@@ -139,3 +143,14 @@ autocmd FileType haml let b:switch_definitions =
       \   g:switch_builtins.true_false,
       \   g:switch_builtins.true_false,
       \ ]
+
+let g:blockle_mapping = '<Leader>B'
+
+" vim-dispatch
+autocmd FileType ruby let b:dispatch = 'rspec %'
+
+let g:unite_source_history_yank_enable = 1
+let g:unite_enable_start_insert = 1
+let g:unite_source_file_mru_long_limit = 100
+let g:unite_source_directory_mru_long_limit = 100
+call unite#filters#matcher_default#use(['matcher_fuzzy'])

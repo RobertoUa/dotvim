@@ -3,13 +3,19 @@ let g:ruby_path = system('rvm current')
 let g:rubycomplete_buffer_loading = 0
 let g:rubycomplete_rails = 0
 "set rtp+={repository_root}/powerline/bindings/vim
-source ~/.vim/bundles.vim
-source ~/.vim/global.vim
-source ~/.vim/plugins.vim
-source ~/.vim/macros.vim
+
+" content of this file is loaded BEFORE all the plugins
+source ~/.vim/bundles.vim  " vundle plugins list
+source ~/.vim/global.vim   " general global configuration
+source ~/.vim/plugins.vim  " configuration for plugins that needs to be set BEFORE plugins are loaded
+source ~/.vim/macros.vim   " some macros
+
 if has('gui_running')
-    source ~/.vim/gvimrc
+  source ~/.vim/gvimrc     " gui specific settings
 end
-"set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
-" vimrc is loaded BEFORE the plugins
-source ~/.vim/before.vim
+
+source ~/.vim/before.vim   " local BEFORE configs
+
+" after.vim is loaded from ./after/plugin/after.vim
+" which should place it AFTER all the other plugins in the loading order
+" bindings.vim and local.vim are loaded from after.vim

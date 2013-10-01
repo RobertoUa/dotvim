@@ -50,12 +50,15 @@ announcements of new versions, tips, etc.
   * [vim-endwise](#vim-endwise)
   * [delimitMate](#delimitMate)
   * [Gundo](#gundo)
+  * [vim-dispatch](#vim-dispatch)
+  * [unite.vim](#unite.vim)
 * [Ruby/Rails Support](#ruby)
   * [vim-rails](#vim-rails)
   * [vim-bundler](#vim-bundler)
   * [vim-rake](#vim-rake)
   * [vim-textobj-rubyblock](#vim-textobj-rubyblock)
   * [vim-ruby-refactoring](#vim-ruby-refactoring)
+  * [blockle.vim](#blockle)
   * [apidock.vim](#apidock.vim)
 * [Org mode and support plugins](#orgmode)
   * [calendar](#calendar)
@@ -388,7 +391,7 @@ execute it with `@a`.
     Usage is similar to textobj-rubyblock, just with `i` instead of `r`
 
     * `vai` / `vii` - select indent block including / excluding the outer lines
-    * ...
+    * `yai` / `yii` - yank ...
 
 *   <a name=greplace.vim>[greplace.vim](http://github.com/vim-scripts/greplace.vim) ([top](#top))
 
@@ -474,6 +477,30 @@ execute it with `@a`.
     * `,u` - toggle undo window
     * `:h gundo.txt` - more help
 
+*   <a name=vim-dispatch>[vim-dispatch](https://github.com/tpope/vim-dispatch) ([top](#top))
+
+    Asynchronous build and test dispatcher from Tpope.
+
+    This plugin allows to run sync/async builds and other shell commands in
+    background, with progress support.
+
+    try `:Dispatch` from inside a Rails rspec file. `:h dispatch` for more
+    info.
+
+*   <a name=unite.vim>[unite.vim][unite] ([top](#top))
+
+    Search and display information from arbitrary sources like files, buffers,
+    recently used files or registers.
+
+    This plugins is to powerful to present here, read the [documentation][unite].
+
+    Just to give you the taste of it, try:
+
+    `:Unite -no-start-insert -auto-preview colorscheme`
+
+    Then try to navigate up and down and see what happens ;)
+
+[unite]: https://github.com/Shougo/unite.vim
 
 *   <a name=switch>[Switch](https://github.com/AndrewRadev/switch.vim) ([top](#top))
 
@@ -546,6 +573,15 @@ execute it with `@a`.
     * `,rriv` :RRenameInstanceVariable - Rename Instance Variable (visual selection)
     * `,rem`  :RExtractMethod          - Extract Method (visual selection)
 
+*   <a name=blockle)>[blockle.vim](https://github.com/vim-scripts/blockle.vim) ([top](#top))
+
+    Toggle ruby blocks style, e.g `{}` to `do .. end`
+
+    * `,B` - toggle block style
+
+    > NOTE: thre is an unfortunate interaction with delimitMate, the opening
+    > brase gets completed. i.e. you get `{} ... }`
+
 *   <a name=apidock.vim>[apidock.vim](https://github.com/alexandrov/apidock.vim) ([top](#top))
 
     Vim plugin that searches http://apidock.com Ruby, Rails, and RSpec docs from within Vim.
@@ -553,7 +589,6 @@ execute it with `@a`.
     * `RR` - Search the Rails docs for the word under the cursor.
     * `RB` - Search the Ruby docs for the word under the cursor.
     * `RS` - Search the RSpec docs for the word under the cursor.
-
 
 [top](#top)
 
@@ -714,6 +749,15 @@ used intependently.
 
     press SPACE to repeat last motion command
 
+ *  [vim-gist](http://github.com/mattn/gist-vim)
+
+    create gists on github
+
+    - `:Gist` - gist the buffer
+    - `:'<,'>Gist` - gist selection
+    - `:Gist -p` - private gist
+    - :h Gist.vim
+
 
 [top](#top)
 
@@ -768,6 +812,18 @@ To use this feature: just include the file from your ~/.local.vim:
 
 [top](#top)
 
+<a name=writer>
+#### writer.vim
+
+My attempt to make vim look like iWriter ;)
+You can read about the details on [our blog][blog_writer].
+
+In short, just do `:so ~/.vim/writer.vim` when you are going to do some plain
+text writing.
+
+[blog_writer]: http://astrails.com/blog/2013/8/12/writing-markdown-with-style-in-vim
+
+[top](#top)
 
 #### Copyright
 

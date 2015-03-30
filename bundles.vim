@@ -37,7 +37,6 @@ Bundle 'greplace.vim'
 Bundle 'sjl/splice.vim'
 Bundle 'Yggdroot/indentLine'
 "Bundle 'Lokaltog/TagHighlight'
-Bundle 'Raimondi/delimitMate'
 "Bundle 'joonty/vdebug.git'
 
 " plugin for resolving three-way merge conflicts
@@ -162,8 +161,6 @@ Bundle 'groenewege/vim-less'
 Bundle 'vim-scripts/jsbeautify'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'briancollins/vim-jst'
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
 
 " GIT
 Bundle 'airblade/vim-gitgutter'

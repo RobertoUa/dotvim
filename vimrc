@@ -1,9 +1,3 @@
-let g:powerline_loaded = 1
-let g:ruby_path = system('rvm current')
-let g:rubycomplete_buffer_loading = 0
-let g:rubycomplete_rails = 0
-"set rtp+={repository_root}/powerline/bindings/vim
-
 " content of this file is loaded BEFORE all the plugins
 source ~/.vim/bundles.vim  " vundle plugins list
 source ~/.vim/global.vim   " general global configuration

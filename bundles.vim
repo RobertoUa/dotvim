@@ -152,7 +152,7 @@ Bundle 'fholgado/minibufexpl.vim'
 
 
 Bundle 'mattn/zencoding-vim'
-Bundle 'tsaleh/vim-matchit'
+"Bundle 'tsaleh/vim-matchit'
 Bundle 'Shougo/vimshell'
 Bundle 'tpope/vim-unimpaired'
 "Bundle 'reinh/vim-makegreen'
@@ -204,3 +204,5 @@ Bundle 'bling/vim-airline'
 Bundle 'Shougo/unite.vim'
 Bundle 'Shougo/unite-outline'
 Bundle 'ujihisa/unite-colorscheme'
+
+Bundle 'blueshirts/darcula'

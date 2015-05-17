@@ -14,7 +14,8 @@ set tags+=stdlib.tags
 set updatetime=4000
 set wildmenu
 set wildmode=list:full
-set clipboard=unnamedplus
+"set clipboard=unnamedplus
+set clipboard=unnamed
 set grepprg=ag
 set synmaxcol=400
 let g:DisableAutoPHPFolding = 1
@@ -23,7 +24,7 @@ let g:gitgutter_all_on_focusgained = 1
 let g:gitgutter_sign_column_always = 1
 let g:gundo_auto_preview = 0
 let g:nerd_tree_tabs_open_on_gui_startup = 0
-colorscheme railscasts
+colorscheme darcula
 hi SignColumn ctermbg=236 guibg=#333
 if has("gui_running")
     set guioptions-=mrL
